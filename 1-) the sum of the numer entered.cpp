@@ -13,7 +13,7 @@ int main()
     cin >> number;
     length  =  to_string(number).length(); // integer to string for number length.
 
-    cout <<endl<<"Lenth of this number is : " << length <<endl;
+    cout <<endl<<"Length of this number is : " << length <<endl;
 
     for (int i = 1; i < length+1; i++)
     {
