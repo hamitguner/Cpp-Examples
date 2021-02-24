@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
 // the program that adds up the digit values of the entered number
 
 int main()
 {
-    int number = 0,sum=0,length,temp = 1,temp1 = 10,result=0;
+    int number = 0,sum=0,length,result=0;
 
     cout << "Enter a number : ";
     cin >> number;
@@ -14,12 +15,10 @@ int main()
 
     cout <<endl<<"Lenth of this number is : " << length <<endl;
 
-    for (int i = 0; i < length; i++)
+    for (int i = 1; i < length+1; i++)
     {
         
-        result = (number%temp1) / temp ; // We will found each number in for loop.
-        temp = temp*10;
-        temp1 = temp1 *10;
+        result = (number%(int) pow(10,i) / pow(10,i-1) ); // We will found each number in for loop.
         sum += result;
         
     }
